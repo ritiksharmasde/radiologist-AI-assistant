@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Diagnosis Result</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+font-family:'Segoe UI',sans-serif;
+padding-top:60px;
+padding-bottom:60px;
+}
+
+.card{
+width:900px;
+border:none;
+border-radius:20px;
+padding:35px;
+background:rgba(255,255,255,0.96);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+animation:fadeIn 0.7s ease;
+}
+
+.result-badge{
+font-size:22px;
+font-weight:600;
+padding:10px 25px;
+border-radius:30px;
+display:inline-block;
+margin-top:10px;
+}
+
+.normal{
+background:#d4edda;
+color:#155724;
+}
+
+.abnormal{
+background:#f8d7da;
+color:#721c24;
+}
+
+img{
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+width:100%;
+}
+
+.btn-secondary{
+border-radius:25px;
+padding:10px 25px;
+}
+
+.image-title{
+font-weight:600;
+margin-bottom:10px;
+}
+
+.legend-box{
+background:#f8f9fa;
+border-radius:10px;
+padding:20px;
+margin-top:20px;
+}
+
+.legend-box p{
+margin:6px 0;
+font-size:15px;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container d-flex justify-content-center">
+
+<div class="card text-center">
+
+<h2 class="text-primary">
+<i class="fa-solid fa-brain"></i>
+AI Diagnosis Result
+</h2>
+
+<hr>
+
+<h5>Scan Type</h5>
+<p>{{scan_type}}</p>
+
+<h5>AI Prediction</h5>
+
+{% if prediction == "Normal" %}
+<div class="result-badge normal">
+<i class="fa-solid fa-circle-check"></i>
+{{prediction}}
+</div>
+{% else %}
+<div class="result-badge abnormal">
+<i class="fa-solid fa-triangle-exclamation"></i>
+{{prediction}}
+</div>
+{% endif %}
+
+<br><br>
+
+<h5 class="mb-4">AI Visualization</h5>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<div class="image-title">Original Scan</div>
+
+<img src="{{image}}">
+
+</div>
+
+<div class="col-md-6">
+
+<div class="image-title">AI Heatmap</div>
+
+<img src="{{heatmap}}">
+
+</div>
+
+</div>
+
+<div class="legend-box text-start">
+
+<h5>Heatmap Explanation</h5>
+
+<p><b style="color:red;">🔴 Red / Pink</b> – Strong evidence for  abnormal region</p>
+
+<p><b style="color:orange;">🟡 Yellow</b> – Moderate importance for AI decision</p>
+
+<p><b style="color:green;">🟢 Green</b> – Low importance</p>
+
+<p><b style="color:blue;">🔵 Blue</b> – Not important for prediction</p>
+
+</div>
+
+<br>
+
+<div class="alert alert-info">
+
+<b>AI Suggestion:</b><br>
+This prediction is generated using deep learning analysis.
+Clinical confirmation by a radiologist is recommended.
+
+</div>
+
+<a href="/">
+
+<button class="btn btn-secondary">
+<i class="fa-solid fa-arrow-left"></i>
+Analyze Another Scan
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
