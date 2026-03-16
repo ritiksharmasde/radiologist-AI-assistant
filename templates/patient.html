@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Radiology AI Assistant</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+height:100vh;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+display:flex;
+justify-content:center;
+align-items:center;
+font-family: 'Segoe UI',sans-serif;
+}
+
+.card{
+width:420px;
+border:none;
+border-radius:18px;
+backdrop-filter: blur(12px);
+background: rgba(255,255,255,0.95);
+box-shadow:0 10px 35px rgba(0,0,0,0.3);
+padding:30px;
+animation: fadeIn 0.8s ease;
+}
+
+.title{
+font-weight:700;
+color:#1c3d5a;
+}
+
+.subtitle{
+font-size:15px;
+color:#666;
+}
+
+.form-control{
+border-radius:10px;
+padding:10px;
+}
+
+.btn-primary{
+border-radius:25px;
+padding:10px 30px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-primary:hover{
+transform:scale(1.05);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.logo{
+font-size:40px;
+color:#2c7be5;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="text-center mb-4">
+
+<div class="logo">
+<i class="fa-solid fa-stethoscope"></i>
+</div>
+
+<h2 class="title">Radiology AI</h2>
+
+<p class="subtitle">
+AI Powered Medical Imaging Assistant
+</p>
+
+</div>
+
+<form action="/select_scan" method="POST">
+
+<div class="mb-3">
+
+<label class="form-label">
+<i class="fa-solid fa-user"></i>
+Patient Name
+</label>
+
+<input type="text" name="name"
+class="form-control"
+placeholder="Enter patient name"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+<i class="fa-solid fa-calendar"></i>
+Age
+</label>
+
+<input type="number"
+name="age"
+class="form-control"
+placeholder="Enter age"
+required>
+
+</div>
+
+<div class="mb-4">
+
+<label class="form-label">
+<i class="fa-solid fa-venus-mars"></i>
+Gender
+</label>
+
+<select name="gender" class="form-control">
+
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="text-center">
+
+<button class="btn btn-primary">
+Continue <i class="fa-solid fa-arrow-right"></i>
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

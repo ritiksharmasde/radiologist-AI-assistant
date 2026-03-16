@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Select Scan Type</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+height:100vh;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+font-family:'Segoe UI',sans-serif;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.container-box{
+width:900px;
+text-align:center;
+color:white;
+}
+
+.card{
+border:none;
+border-radius:18px;
+padding:30px;
+transition:0.4s;
+cursor:pointer;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.icon{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.chest{
+color:#3fa9f5;
+}
+
+.fracture{
+color:#ff9f43;
+}
+
+.ultrasound{
+color:#00d2a8;
+}
+
+.title{
+margin-bottom:40px;
+font-weight:700;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container-box">
+
+<h2 class="title">
+<i class="fa-solid fa-brain"></i>
+Select Medical Scan Type
+</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<a href="/upload/chest" style="text-decoration:none;">
+
+<div class="card">
+
+<div class="icon chest">
+<i class="fa-solid fa-lungs"></i>
+</div>
+
+<h4>Chest X-Ray</h4>
+
+<p>Detect pneumonia, COVID and lung abnormalities</p>
+
+</div>
+
+</a>
+
+</div>
+
+
+<div class="col-md-4">
+
+<a href="/upload/fracture" style="text-decoration:none;">
+
+<div class="card">
+
+<div class="icon fracture">
+<i class="fa-solid fa-bone"></i>
+</div>
+
+<h4>Bone Fracture</h4>
+
+<p>Identify fractures in X-ray bone scans</p>
+
+</div>
+
+</a>
+
+</div>
+
+
+<div class="col-md-4">
+
+<a href="/upload/ultrasound" style="text-decoration:none;">
+
+<div class="card">
+
+<div class="icon ultrasound">
+<i class="fa-solid fa-wave-square"></i>
+</div>
+
+<h4>Ultrasound</h4>
+
+<p>Detect benign or malignant breast tumors</p>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
