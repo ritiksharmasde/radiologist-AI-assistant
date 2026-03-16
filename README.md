@@ -16,7 +16,10 @@ Evaluate model performance on a real-world dataset.
 
 The dataset used in this project is stored at:
 
-[Provide the exact path or URL to the dataset here, e.g., /data/radiology-images or https://example.com/dataset]
+[(https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) = ultrasound,
+https://data.mendeley.com/datasets/2h62x9xzyd/1 = bone fracture,
+https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database?resource=download = chest xray
+]
 
 ⚠️ Note: Ensure that you have the proper permissions to access and use the dataset. Some radiology datasets may require institutional access or special consent due to privacy concerns.
 
@@ -24,15 +27,15 @@ Dataset Structure
 dataset/
 ├── train/
 │   ├── patient_001/
-│   │   ├── image1.dcm
-│   │   └── image2.dcm
+│   │   ├── image1.jpg
+│   │   └── image2.jpg
 │   └── ...
 ├── test/
 │   ├── patient_101/
-│   │   ├── image1.dcm
-│   │   └── image2.dcm
+│   │   ├── image1.jpg
+│   │   └── image2.jpg
 │   └── ...
-└── labels.csv
+
 🛠 Installation
 
 Clone this repository and install the required dependencies:
