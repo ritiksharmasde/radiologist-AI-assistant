@@ -16,9 +16,6 @@ chest_model = tf.keras.models.load_model("radiology_model.h5")
 fracture_model = tf.keras.models.load_model("radiology_model2.h5")
 ultrasound_model = tf.keras.models.load_model("radiology_model3.h5")
 
-# -------------------------
-# Class Labels
-# -------------------------
 
 chest_classes = ["COVID", "Normal", "Viral Pneumonia"]
 fracture_classes = ["fracture", "normal"]
@@ -28,9 +25,6 @@ UPLOAD_FOLDER = "static/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
-# -------------------------
-# Image Preprocessing
-# -------------------------
 
 def preprocess(img_path):
 
